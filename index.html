@@ -3,33 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Apartments in London</title>
+<title>VIP Apartments in London</title>
 <link rel="icon" type="image/png" href="images/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --glass-bg: rgba(28,24,20,0.55);
-    --glass-border: rgba(212,175,85,0.25);
-    --glass-shadow: 0 8px 40px rgba(0,0,0,0.35);
-    --blur: 22px;
-    --radius: 50px;
-    --accent: #d4af55;
-    --accent2: #c9a84c;
-    --text: #f0e6d2;
-    --text-muted: #9a8e7a;
+    --glass-bg: #ffffff;
+    --glass-border: #e2e8f0;
+    --glass-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --blur: 0px;
+    --radius: 16px;
+    --accent: #0f4c81;
+    --accent2: #1565c0;
+    --accent-light: rgba(15,76,129,0.08);
+    --text: #1a2332;
+    --text-muted: #64748b;
     --btn-wa: #25D366;
     --btn-tg: #2AABEE;
-    --orb1: rgba(212,175,85,0.18);
-    --orb2: rgba(160,120,60,0.15);
-    --orb3: rgba(180,150,80,0.12);
-    --orb4: rgba(212,175,85,0.10);
+    --orb1: rgba(15,76,129,0.04);
+    --orb2: rgba(15,76,129,0.03);
+    --orb3: rgba(15,76,129,0.02);
+    --orb4: rgba(15,76,129,0.02);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'Cormorant Garamond', serif;
-    background: #0d0b09;
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
     color: var(--text);
     min-height: 100vh;
     overflow-x: hidden;
@@ -63,11 +64,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(18,15,12,0.65);
-    backdrop-filter: blur(28px) saturate(1.6);
-    -webkit-backdrop-filter: blur(28px) saturate(1.6);
-    border-bottom: 1.5px solid rgba(212,175,85,0.18);
-    box-shadow: 0 2px 32px rgba(0,0,0,0.25);
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
 
   .nav-logo img {
@@ -82,23 +81,20 @@
   }
 
   .nav-btn {
-    background: rgba(212,175,85,0.1);
-    border: 1.5px solid rgba(212,175,85,0.25);
-    color: var(--text);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
     font-weight: 500;
-    padding: 9px 24px;
-    border-radius: 50px;
+    padding: 8px 18px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.22s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
   }
   .nav-btn:hover {
-    background: rgba(212,175,85,0.22);
-    box-shadow: 0 4px 20px rgba(212,175,85,0.15);
-    transform: translateY(-1px);
+    background: var(--accent-light);
+    color: var(--accent);
   }
 
   .nav-right {
@@ -109,39 +105,34 @@
 
   .nav-icon-btn {
     width: 40px; height: 40px;
-    border-radius: 50px;
-    border: 1.5px solid rgba(212,175,85,0.25);
-    background: rgba(212,175,85,0.08);
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    background: #ffffff;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
-    transition: all 0.22s ease;
+    transition: all 0.2s ease;
     text-decoration: none;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
   }
   .nav-icon-btn:hover {
-    background: rgba(212,175,85,0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(212,175,85,0.18);
+    background: var(--accent-light);
+    border-color: var(--accent);
   }
   .nav-icon-btn svg { width: 20px; height: 20px; }
 
   .lang-switcher {
     display: flex;
-    background: rgba(212,175,85,0.08);
-    border: 1.5px solid rgba(212,175,85,0.25);
-    border-radius: 50px;
+    background: #f8fafc;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
     padding: 3px;
     gap: 2px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
   }
   .lang-btn {
-    padding: 6px 13px;
-    border-radius: 50px;
+    padding: 5px 12px;
+    border-radius: 7px;
     border: none;
     background: transparent;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 600;
     color: var(--text-muted);
@@ -149,9 +140,8 @@
     transition: all 0.2s;
   }
   .lang-btn.active {
-    background: rgba(212,175,85,0.25);
-    color: var(--accent);
-    box-shadow: 0 2px 10px rgba(212,175,85,0.2);
+    background: var(--accent);
+    color: #ffffff;
   }
 
   /* PAGE WRAPPER */
@@ -169,12 +159,12 @@
     margin: 0 auto;
   }
   .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 6vw, 68px);
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 800;
     color: var(--text);
-    line-height: 1.15;
-    letter-spacing: -0.5px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
     margin-bottom: 18px;
   }
   .hero h1 span { color: var(--accent); }
@@ -207,19 +197,20 @@
   }
 
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
     color: var(--text);
     margin-bottom: 30px;
     text-align: center;
+    letter-spacing: -0.5px;
   }
 
   .why-image {
     width: 100%;
     height: 280px;
     object-fit: cover;
-    border-radius: 36px;
+    border-radius: 12px;
     margin-bottom: 36px;
     display: block;
   }
@@ -243,11 +234,10 @@
 
   .feature-icon {
     width: 64px; height: 64px;
-    background: rgba(212,175,85,0.1);
-    border: 1.5px solid rgba(212,175,85,0.25);
-    border-radius: 22px;
+    background: var(--accent-light);
+    border: none;
+    border-radius: 16px;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
   .feature-icon svg { width: 30px; height: 30px; color: var(--accent); }
 
@@ -278,6 +268,11 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .apt-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.12);
   }
 
   .apt-card-inner {
@@ -288,12 +283,12 @@
   }
 
   .apt-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
     color: var(--text);
     padding: 20px 22px 14px;
-    line-height: 1.25;
+    line-height: 1.3;
     text-align: center;
   }
 
@@ -303,7 +298,7 @@
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
-    background: #1a1612;
+    background: #e2e8f0;
   }
 
   .slider-track {
@@ -330,20 +325,18 @@
     top: 50%;
     transform: translateY(-50%);
     width: 36px; height: 36px;
-    background: rgba(18,15,12,0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(212,175,85,0.3);
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e2e8f0;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
     transition: all 0.2s;
     z-index: 10;
   }
-  .slide-arrow:hover { background: rgba(212,175,85,0.2); }
+  .slide-arrow:hover { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.12); }
   .slide-arrow.prev { left: 10px; }
   .slide-arrow.next { right: 10px; }
-  .slide-arrow svg { width: 16px; height: 16px; color: var(--accent); }
+  .slide-arrow svg { width: 16px; height: 16px; color: var(--text); }
 
   .slide-dots {
     position: absolute;
@@ -357,12 +350,12 @@
   .dot {
     width: 6px; height: 6px;
     border-radius: 50%;
-    background: rgba(212,175,85,0.35);
+    background: rgba(255,255,255,0.55);
     transition: all 0.2s;
     cursor: pointer;
   }
   .dot.active {
-    background: var(--accent);
+    background: #ffffff;
     width: 18px;
     border-radius: 3px;
   }
@@ -385,9 +378,9 @@
   }
 
   .apt-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--accent);
     margin-top: 4px;
     text-align: center;
@@ -403,10 +396,10 @@
   .btn-wa, .btn-tg {
     flex: 1;
     padding: 10px 12px;
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12.5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
@@ -414,26 +407,26 @@
     justify-content: center;
     gap: 6px;
     text-decoration: none;
-    transition: all 0.22s;
+    transition: all 0.2s;
   }
 
   .btn-wa {
-    background: rgba(37,211,102,0.12);
-    color: #4ade80;
-    border: 1.5px solid rgba(37,211,102,0.25);
+    background: rgba(37,211,102,0.1);
+    color: #16a34a;
+    border: 1px solid rgba(37,211,102,0.3);
   }
   .btn-wa:hover {
-    background: rgba(37,211,102,0.22);
+    background: rgba(37,211,102,0.18);
     transform: translateY(-1px);
   }
 
   .btn-tg {
-    background: rgba(42,171,238,0.12);
-    color: #60b8e8;
-    border: 1.5px solid rgba(42,171,238,0.25);
+    background: rgba(42,171,238,0.1);
+    color: #0284c7;
+    border: 1px solid rgba(42,171,238,0.3);
   }
   .btn-tg:hover {
-    background: rgba(42,171,238,0.22);
+    background: rgba(42,171,238,0.18);
     transform: translateY(-1px);
   }
 
@@ -442,11 +435,14 @@
   /* FOOTER */
   footer {
     text-align: center;
-    padding: 30px;
+    padding: 32px 30px;
     color: var(--text-muted);
-    font-size: 13px;
+    font-size: 14px;
     position: relative;
     z-index: 1;
+    border-top: 1px solid var(--glass-border);
+    background: #ffffff;
+    margin-top: 40px;
   }
 
   /* MODAL */
@@ -465,12 +461,10 @@
   .modal-overlay.open { display: flex; }
 
   .modal-box {
-    background: rgba(28,24,20,0.88);
-    backdrop-filter: blur(30px) saturate(1.8);
-    -webkit-backdrop-filter: blur(30px) saturate(1.8);
-    border: 1.5px solid rgba(212,175,85,0.25);
-    border-radius: 36px;
-    box-shadow: 0 20px 80px rgba(0,0,0,0.4);
+    background: #ffffff;
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     padding: 44px 44px 40px;
     max-width: 520px;
     width: 100%;
@@ -484,22 +478,23 @@
     top: 18px; right: 18px;
     width: 36px; height: 36px;
     border-radius: 50%;
-    background: rgba(212,175,85,0.12);
-    border: 1.5px solid rgba(212,175,85,0.25);
+    background: #f8fafc;
+    border: 1px solid var(--glass-border);
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
     font-size: 18px;
     color: var(--text-muted);
     transition: all 0.2s;
   }
-  .modal-close:hover { background: rgba(212,175,85,0.25); color: var(--accent); }
+  .modal-close:hover { background: var(--accent-light); color: var(--accent); }
 
   .modal-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
     color: var(--text);
     margin-bottom: 28px;
+    letter-spacing: -0.5px;
   }
 
   .modal-section {
@@ -520,12 +515,12 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 9px 0;
-    border-bottom: 1px solid rgba(212,175,85,0.1);
+    border-bottom: 1px solid var(--glass-border);
     gap: 20px;
   }
   .modal-row:last-child { border-bottom: none; }
-  .modal-row-label { font-size: 15px; color: var(--text-muted); font-weight: 400; min-width: 140px; }
-  .modal-row-val { font-size: 15px; color: var(--text); font-weight: 500; text-align: right; }
+  .modal-row-label { font-size: 14px; color: var(--text-muted); font-weight: 400; min-width: 140px; }
+  .modal-row-val { font-size: 14px; color: var(--text); font-weight: 600; text-align: right; }
 
   .modal-contact-note {
     font-size: 16px;
@@ -540,10 +535,10 @@
     gap: 9px;
     width: 100%;
     padding: 13px 20px;
-    border-radius: 50px;
+    border-radius: 12px;
     border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
@@ -552,25 +547,25 @@
   }
 
   .modal-btn-email {
-    background: rgba(212,175,85,0.12);
+    background: var(--accent-light);
     color: var(--accent);
-    border: 1.5px solid rgba(212,175,85,0.25);
+    border: 1px solid var(--glass-border);
   }
-  .modal-btn-email:hover { background: rgba(212,175,85,0.22); transform: translateY(-1px); }
+  .modal-btn-email:hover { background: rgba(15,76,129,0.14); transform: translateY(-1px); }
 
   .modal-btn-wa {
-    background: rgba(37,211,102,0.12);
-    color: #4ade80;
-    border: 1.5px solid rgba(37,211,102,0.25);
+    background: rgba(37,211,102,0.1);
+    color: #16a34a;
+    border: 1px solid rgba(37,211,102,0.3);
   }
-  .modal-btn-wa:hover { background: rgba(37,211,102,0.22); transform: translateY(-1px); }
+  .modal-btn-wa:hover { background: rgba(37,211,102,0.18); transform: translateY(-1px); }
 
   .modal-btn-tg {
-    background: rgba(42,171,238,0.12);
-    color: #60b8e8;
-    border: 1.5px solid rgba(42,171,238,0.25);
+    background: rgba(42,171,238,0.1);
+    color: #0284c7;
+    border: 1px solid rgba(42,171,238,0.3);
   }
-  .modal-btn-tg:hover { background: rgba(42,171,238,0.22); transform: translateY(-1px); }
+  .modal-btn-tg:hover { background: rgba(42,171,238,0.18); transform: translateY(-1px); }
 
   .modal-btn svg { width: 18px; height: 18px; }
 
@@ -583,21 +578,19 @@
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    background: rgba(212,175,85,0.1);
-    border: 1.5px solid rgba(212,175,85,0.25);
-    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
     padding: 10px 12px;
     cursor: pointer;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.22s;
+    transition: all 0.2s;
   }
-  .hamburger-btn:hover { background: rgba(212,175,85,0.22); }
+  .hamburger-btn:hover { background: var(--accent-light); }
   .hamburger-btn span {
     display: block;
     width: 20px;
     height: 2px;
-    background: var(--accent);
+    background: var(--text);
     border-radius: 2px;
   }
 
@@ -607,13 +600,13 @@
     position: fixed;
     inset: 0;
     z-index: 1500;
-    background: rgba(13,11,9,0.85);
-    backdrop-filter: blur(32px) saturate(1.8);
-    -webkit-backdrop-filter: blur(32px) saturate(1.8);
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 28px;
+    gap: 24px;
   }
   .mobile-menu.open { display: flex; }
 
@@ -622,8 +615,8 @@
     top: 20px; right: 20px;
     width: 42px; height: 42px;
     border-radius: 50%;
-    background: rgba(212,175,85,0.12);
-    border: 1.5px solid rgba(212,175,85,0.25);
+    background: #f8fafc;
+    border: 1px solid var(--glass-border);
     font-size: 18px;
     color: var(--text-muted);
     cursor: pointer;
@@ -632,17 +625,17 @@
     justify-content: center;
     transition: all 0.2s;
   }
-  .mobile-menu-close:hover { background: rgba(212,175,85,0.25); color: var(--accent); }
+  .mobile-menu-close:hover { background: var(--accent-light); color: var(--accent); }
 
   .mobile-nav-item {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
     color: var(--text);
     background: none;
     border: none;
     cursor: pointer;
-    letter-spacing: 0.3px;
+    letter-spacing: -0.5px;
     transition: color 0.2s;
   }
   .mobile-nav-item:hover { color: var(--accent); }
@@ -692,7 +685,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="images/logo.png" alt="Luxury Apartments in London">
+    <img src="images/logo.png" alt="VIP Apartments in London">
   </div>
 
   <div class="nav-center">
@@ -759,11 +752,11 @@
       <div class="modal-section-title" data-i18n="about_requisites">Реквизиты</div>
       <div class="modal-row">
         <span class="modal-row-label" data-i18n="about_legal_name">Юридическое название</span>
-        <span class="modal-row-val">Rockyblase Holiday Lets Ltd</span>
+        <span class="modal-row-val">Elite Crown Real Estates Ltd</span>
       </div>
       <div class="modal-row">
         <span class="modal-row-label" data-i18n="about_trade_name">Торговое название</span>
-        <span class="modal-row-val">Luxury Apartments in London</span>
+        <span class="modal-row-val">VIP Apartments in London</span>
       </div>
       <div class="modal-row">
         <span class="modal-row-label" data-i18n="about_type">Тип</span>
@@ -771,15 +764,15 @@
       </div>
       <div class="modal-row">
         <span class="modal-row-label" data-i18n="about_reg">Рег. номер</span>
-        <span class="modal-row-val">17055240</span>
+        <span class="modal-row-val">17032871</span>
       </div>
       <div class="modal-row">
         <span class="modal-row-label" data-i18n="about_address">Адрес</span>
-        <span class="modal-row-val">25 Dorset Road, London, SW8 1EF</span>
+        <span class="modal-row-val">PO Box 4385, Cardiff, CF14 8LH</span>
       </div>
       <div class="modal-row">
         <span class="modal-row-label" data-i18n="about_reg_date">Дата регистрации</span>
-        <span class="modal-row-val">25 February 2026</span>
+        <span class="modal-row-val">13 February 2026</span>
       </div>
     </div>
 
@@ -850,10 +843,11 @@
 
   <!-- APARTMENTS -->
   <section class="apts-section" id="apartments">
+    <h2 class="section-title" data-i18n="apts_title" style="margin-bottom:28px;">Our Properties</h2>
     <div class="apts-grid" id="aptsGrid"></div>
   </section>
 
-  <footer>© 2026 Rockyblase Holiday Lets Ltd</footer>
+  <footer>© 2026 Elite Crown Real Estates Ltd · Company No. 17032871 · Cardiff, CF14 8LH</footer>
 </div>
 
 <script>
@@ -869,7 +863,7 @@ const translations = {
   en: {
     nav_apts: "Apartments",
     nav_about: "About us",
-    hero_title: "Luxury Apartments<br><span>in London</span>",
+    hero_title: "VIP Apartments<br><span>in London</span>",
     hero_subtitle: "Exclusive apartments and rooms in prestigious areas —<br>Chelsea, Knightsbridge, Kensington and Bond Street",
     why_title: "Why us?",
     why_1: "Move-in within 1–2 days",
@@ -893,11 +887,12 @@ const translations = {
     apt_price_week: "per week",
     apt_price_or: "or",
     apt_price_month: "per month",
+    apts_title: "Our Properties",
   },
   ru: {
     nav_apts: "Квартиры",
     nav_about: "О нас",
-    hero_title: "Элитные апартаменты<br><span>в Лондоне</span>",
+    hero_title: "VIP Апартаменты<br><span>в Лондоне</span>",
     hero_subtitle: "Эксклюзивные квартиры и комнаты в престижных районах —<br>Chelsea, Knightsbridge, Kensington и Bond Street",
     why_title: "Почему мы?",
     why_1: "Заселение за 1–2 дня",
@@ -921,11 +916,12 @@ const translations = {
     apt_price_week: "в неделю",
     apt_price_or: "или",
     apt_price_month: "в месяц",
+    apts_title: "Наши объекты",
   },
   pt: {
     nav_apts: "Apartamentos",
     nav_about: "Sobre nós",
-    hero_title: "Apartamentos de Luxo<br><span>em Londres</span>",
+    hero_title: "Apartamentos VIP<br><span>em Londres</span>",
     hero_subtitle: "Apartamentos e quartos exclusivos em áreas prestigiadas —<br>Chelsea, Knightsbridge, Kensington e Bond Street",
     why_title: "Por que nós?",
     why_1: "Check-in em 1–2 dias",
@@ -949,6 +945,7 @@ const translations = {
     apt_price_week: "por semana",
     apt_price_or: "ou",
     apt_price_month: "por mês",
+    apts_title: "Nossas Propriedades",
   }
 };
 
